@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "613631567311",
+    "project_id": "adsapp-ff371",
+    "storage_bucket": "adsapp-ff371.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:613631567311:android:d801bfac2f885b6910deba",
+        "android_client_info": {
+          "package_name": "masharia.ads.us"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "613631567311-3hltmo87oocqrfvqkpt3bremp52c2ep0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-Y0d-EJtNLVlPBXXbgD9YuN8IZwMIyPI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "613631567311-3hltmo87oocqrfvqkpt3bremp52c2ep0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
