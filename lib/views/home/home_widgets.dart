@@ -1,4 +1,3 @@
-import 'package:ads_app/services/tabs/ad/add_display.dart';
 import 'package:ads_app/controllers/home/filter_controller.dart';
 import 'package:ads_app/controllers/home/home_controller.dart';
 import 'package:ads_app/controllers/home/search_controller.dart';
@@ -12,7 +11,6 @@ import 'package:ads_app/views/more/ads/ads_widgets.dart';
 import 'package:ads_app/views/one_ad/one_ad.dart';
 import 'package:ads_app/views/shared/shared_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -208,58 +206,8 @@ class HomeWidgets {
     );
   }
 
-  static home_slider(BuildContext context, HomeController homeController) {
-    print(homeController.slider);
-    return Padding(
-      padding: EdgeInsets.only(top: 2.w, bottom: 5.w),
-      child: Container(
-        height: dh(context) / 5,
-        width: dw(context),
-        color: Colors.transparent,
-        child: FlutterCarousel(
-            items: homeController.slider.map((item) {
-              return Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 1.w),
-                  child: InkWell(
-                      onTap: () async {
-                        DisplayAd.displayAd(item['phone']);
-                      },
-                      child: buildNetworkImage(context, "${item['image']}", 3.w,
-                          3.w, 3.w, 3.w, 0, 0, BoxFit.cover)));
-            }).toList(),
-            options: CarouselOptions(
-              height: dh(context) / 5,
-              aspectRatio: 16 / 9,
-              viewportFraction: 1.0,
-              initialPage: 0,
-              enableInfiniteScroll: true,
-              reverse: true,
-              autoPlay: true,
-              autoPlayInterval: const Duration(seconds: 5),
-              autoPlayAnimationDuration: const Duration(milliseconds: 1500),
-              autoPlayCurve: Curves.fastOutSlowIn,
-              enlargeCenterPage: false,
-              onPageChanged: (s, c) {},
-              pageSnapping: true,
-              scrollDirection: Axis.horizontal,
-              pauseAutoPlayOnTouch: true,
-              pauseAutoPlayOnManualNavigate: true,
-              pauseAutoPlayInFiniteScroll: false,
-              enlargeStrategy: CenterPageEnlargeStrategy.scale,
-              disableCenter: false,
-              showIndicator: true,
-              slideIndicator: CircularSlideIndicator(
-                indicatorBackgroundColor: black,
-                itemSpacing: 12,
-                currentIndicatorColor: white,
-                indicatorBorderColor: black,
-                indicatorBorderWidth: 1,
-                indicatorRadius: 1.w,
-              ),
-            )),
-      ),
-    );
-  }
+
+ 
 
   static buildOneDropdown(HomeController homeController, RxString currenthint,
       List items, BuildContext context, Function actionOnChnage) {

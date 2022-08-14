@@ -187,7 +187,7 @@ class OneAdWidgets {
             initialPage: 0,
             enableInfiniteScroll: true,
             reverse: true,
-            autoPlay: false,
+            autoPlay: true,
             autoPlayInterval: const Duration(seconds: 5),
             autoPlayAnimationDuration: const Duration(milliseconds: 1500),
             autoPlayCurve: Curves.fastOutSlowIn,
